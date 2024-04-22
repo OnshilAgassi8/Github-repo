@@ -40,12 +40,12 @@ function Home() {
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
-    setCurrentPage(1); // Reset page number when search term changes
+    setCurrentPage(1); 
   };
 
   const handleFilterChange = (event) => {
     setFilterLanguage(event.target.value);
-    setCurrentPage(1); // Reset page number when filter changes
+    setCurrentPage(1); 
   };
 
   const userElements = user.map((userElement) => {
@@ -77,7 +77,7 @@ function Home() {
           <option value="">All Languages</option>
           <option value="JavaScript">JavaScript</option>
           <option value="Python">Python</option>
-          {/* Add more options as needed */}
+
         </select>
       </div>
       <section className="repo-container">{userElements}</section>
