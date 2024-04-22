@@ -39,7 +39,7 @@ Error Page
 
 ### Links
 
-- Live Site URL: [Agassi's GitHub](https://githubportfolio-maame.netlify.app/)
+- Live Site URL: [Agassi's GitHub](https://github-repo-steel.vercel.app/)
 
 ## My process
 
@@ -49,30 +49,23 @@ Error Page
 
 ### What I learned
 
-- How to fetch data from an external source using `fetch()`
-- Adding routes to react apps using React Router v6
-- Implementing SEO using `meta`
-- Depolying React Routed sites to netlify
-- Implementing pagination using the GitHub API
-- Creating error boundaries and implementing error pages
-
-
-### Continued development
-
-This was my first time working with most of the concepts I used in building the project. I plan to learn more about APIs, React Hooks and implementing SEOs.
-
+- How to fetch data from an external source using `fetch()`,
+- How to add routes to react apps using React Router v6,
+- How to implement SEO using `meta`,
+- How to depoly React Routed sites to vercel,
+- Implementing pagination using the GitHub API,
+- Creating error boundaries and implementing error pages.
 
 ### Useful resources
 
 These resources were useful in helping me build this project
 
-- [Different Ways to fetch data from API in Reactjs](https://statusneo.com/different-ways-to-fetch-data-from-api-in-reactjs/) 
-- [Netlify React 'Page Not Found' Solution](https://www.youtube.com/watch?v=JCM_xoWbF70)
+- [Different Ways to fetch data from API in Reactjs](https://statusneo.com/ different-ways-to-fetch-data-from-api-in-reactjs/) 
 - [React Router tutorial](https://reactrouter.com/en/main/start/tutorial)
 - [Github - List repositories for a user](https://docs.github.com/en/rest/repos/repos#list-repositories-for-a-user)
 
 ## Author
 
-- Website - [Agassi Eribo](https://mbonamensa.netlify.app)
+- Website - [Agassi Eribo](https://github-repo-steel.vercel.app/)
 - Twitter - [@_aeriboonshil__
 ](https://twitter.com/_aeriboonshil__)
