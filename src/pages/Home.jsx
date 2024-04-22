@@ -6,11 +6,19 @@ function Home() {
   const [user, setUser] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [showViewMore, setShowViewMore] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filterLanguage, setFilterLanguage] = useState("");
 
   const fetchRepos = () => {
-    fetch(
-      `https://api.github.com/users/OnshilAgassi8/repos?per_page=6&page=${currentPage}`
-    )
+    let url = `https://api.github.com/users/OnshilAgassi8/repos?per_page=6&page=${currentPage}`;
+    if (searchTerm) {
+      url += `&q=${encodeURIComponent(searchTerm)}`;
+    }
+    if (filterLanguage) {
+      url += `&language=${encodeURIComponent(filterLanguage)}`;
+    }
+
+    fetch(url)
       .then((response) => response.json())
       .then((data) => {
         if (data.length === 0) {
@@ -24,11 +32,22 @@ function Home() {
 
   useEffect(() => {
     fetchRepos();
-  }, [currentPage]);
+  }, [currentPage, searchTerm, filterLanguage]);
 
   const viewMore = () => {
     setCurrentPage(currentPage + 1);
   };
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+    setCurrentPage(1); // Reset page number when search term changes
+  };
+
+  const handleFilterChange = (event) => {
+    setFilterLanguage(event.target.value);
+    setCurrentPage(1); // Reset page number when filter changes
+  };
+
   const userElements = user.map((userElement) => {
     return (
       <div className="repo-card" key={userElement.id}>
@@ -47,6 +66,20 @@ function Home() {
 
   return (
     <>
+      <div className="search-filter">
+        <input
+          type="text"
+          placeholder="Search by repository name"
+          value={searchTerm}
+          onChange={handleSearchChange}
+        />
+        <select value={filterLanguage} onChange={handleFilterChange}>
+          <option value="">All Languages</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="Python">Python</option>
+          {/* Add more options as needed */}
+        </select>
+      </div>
       <section className="repo-container">{userElements}</section>
       <p className="view-more" onClick={viewMore}>
         {showViewMore}
