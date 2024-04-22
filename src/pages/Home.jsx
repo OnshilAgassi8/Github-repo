@@ -75,11 +75,11 @@ function Home() {
         />
         <select value={filterLanguage} onChange={handleFilterChange}>
           <option value="">All Languages</option>
-          <option value="Html">Python</option>
-          <option value="CSS">Python</option>
+          <option value="Html">Html</option>
+          <option value="CSS">CSS</option>
           <option value="JavaScript">JavaScript</option>
 
-          
+
         </select>
       </div>
       <section className="repo-container">{userElements}</section>
