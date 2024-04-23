@@ -4,7 +4,7 @@ function Navbar() {
   return (
     <div className="navbar">
       <FaGithub className="github-icon" />
-      <h1>Agassi's GitHub.</h1>
+      <h1>Agassi's GitHub Portfolio.</h1>
     </div>
   );
 }
