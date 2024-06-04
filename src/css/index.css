@@ -28,15 +28,17 @@ p {
     align-items: center;
     gap: 10px;
     justify-content: center;
-    background-color: #211421;
-    color:#ffffff;
+    background-color: #000000;
+    color:#e3d1e3;
     text-align: center;
     padding: 20px;
-    margin-bottom: 100px
+    margin-bottom: 100px;
+    font-style: oblique;
 }
 
 .github-icon {
     font-size: 3rem;
+    color: #e3d1e3;
 }
 
 section {
@@ -158,6 +160,7 @@ a:hover {
     border: 1px solid #d479a3;
     border-radius: 5px;
     margin-right: 10px;
+    margin-left: 30px;
   }
   
   .search-filter select {
@@ -167,3 +170,7 @@ a:hover {
     cursor: pointer;
   }
   
+  .search-filter input::placeholder {
+    color: #000000;
+    font-style: italic;
+  }
