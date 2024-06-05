@@ -173,4 +173,11 @@ a:hover {
   .search-filter input::placeholder {
     color: #000000;
     font-style: italic;
+    font-weight: bold;
+  }
+
+  select.search-btn {
+    color: #000000;
+    font-style: italic;
+    font-weight: bold;
   }

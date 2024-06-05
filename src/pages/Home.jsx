@@ -73,7 +73,7 @@ function Home() {
           value={searchTerm}
           onChange={handleSearchChange}
         />
-        <select value={filterLanguage} onChange={handleFilterChange}>
+        <select class="search-btn" value={filterLanguage} onChange={handleFilterChange}>
           <option value="">All Languages</option>
           <option value="HTML">HTML</option>
           <option value="CSS">CSS</option>
